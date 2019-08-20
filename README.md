@@ -1,5 +1,11 @@
 # NgxMicroFrontendPages
 
+Microfrontend workshop - A collection of Page components
+
+> All the page components in a single place.
+
+This will be our first step in the workshop. After that we can refactor, improve and decouple our code.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
 ## Development server
