@@ -1,0 +1,35 @@
+@import 'helpers/_include-media';
+
+.product-list {
+  display: flex;
+  position: relative;
+  width: 90%;
+  list-style: none;
+  padding: 0;
+}
+
+.product-list-item {
+  background: #eee;
+  margin: 10px;
+  padding: 0;
+  width: 100%;
+
+  @include media('>=tablet') {
+    width: 250px;
+    min-height: 350px;
+  }
+}
+
+.product-list-link {
+  text-decoration: none;
+}
+
+.product-list-image {
+  width: 250px;
+  background: red;
+}
+
+.product-list-info {
+  margin: 10px;
+  padding: 10px;
+}

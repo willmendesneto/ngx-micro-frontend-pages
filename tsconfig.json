@@ -17,6 +17,44 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "home-page": [
+        "dist/home-page"
+      ],
+      "home-page/*": [
+        "dist/home-page/*"
+      ],
+      "header": [
+        "dist/header"
+      ],
+      "header/*": [
+        "dist/header/*"
+      ],
+      "footer": [
+        "dist/footer"
+      ],
+      "footer/*": [
+        "dist/footer/*"
+      ],
+      "list-item-page": [
+        "dist/list-item-page"
+      ],
+      "list-item-page/*": [
+        "dist/list-item-page/*"
+      ],
+      "list-items-page": [
+        "dist/list-items-page"
+      ],
+      "list-items-page/*": [
+        "dist/list-items-page/*"
+      ],
+      "ngx-micro-frontend-pages": [
+        "dist/ngx-micro-frontend-pages"
+      ],
+      "ngx-micro-frontend-pages/*": [
+        "dist/ngx-micro-frontend-pages/*"
+      ]
+    }
   }
 }
