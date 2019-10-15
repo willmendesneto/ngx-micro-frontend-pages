@@ -9,7 +9,8 @@ const routes: Routes = [
   {
     path: 'checkout',
     loadChildren: () =>
-      import('./layouts/checkout/checkout-layout.module').then(mod => mod.CheckoutLayoutModule),
+      import('./layouts/checkout/checkout-layout.module')
+        .then(mod => mod.CheckoutLayoutModule),
     data: {
       title: 'Checkout Page',
       description: 'Checkout Page Description',
@@ -18,7 +19,8 @@ const routes: Routes = [
   {
     path: 'docs',
     loadChildren: () =>
-      import('./layouts/docs/docs-layout.module').then(mod => mod.DocsLayoutModule),
+      import('./layouts/docs/docs-layout.module')
+        .then(mod => mod.DocsLayoutModule),
     data: {
       title: 'Docs Page',
       description: 'Docs Page Description',
@@ -27,7 +29,8 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./layouts/home/home-layout.module').then(mod => mod.HomeLayoutModule),
+      import('./layouts/home/home-layout.module')
+        .then(mod => mod.HomeLayoutModule),
     data: {
       title: 'Home Page',
       description: 'Home Page Description',

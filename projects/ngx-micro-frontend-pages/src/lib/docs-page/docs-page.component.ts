@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { start, end } from 'perf-marks';
 @Component({
   selector: 'ngx-docs-page',
   templateUrl: './docs-page.component.html',
@@ -9,17 +9,12 @@ export class DocsPageComponent implements OnInit {
   private measureName = 'DocsPageComponent';
 
   private startMark = `[START]: ${this.measureName}`;
-  private endMark = `[END]: ${this.measureName}`;
 
   constructor() {
-    performance.mark(this.startMark);
+    start(this.startMark);
   }
 
   ngOnInit() {
-    performance.mark(this.endMark);
-    performance.measure(this.measureName, this.startMark, this.endMark);
-    performance.clearMeasures(this.measureName);
-    performance.clearMarks(this.startMark);
-    performance.clearMarks(this.endMark);
+    end(this.startMark);
   }
 }

@@ -1,12 +1,12 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, ResolveStart } from '@angular/router';
+import { Router, ResolveStart } from '@angular/router';
+import { start, end } from 'perf-marks';
 
 import { filter, map } from 'rxjs/operators';
 
 const measureName = 'AppComponent';
 
 const startMark = `[START]: ${measureName}`;
-const endMark = `[END]: ${measureName}`;
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   description = '';
 
   constructor(private router: Router) {
-    performance.mark(startMark);
+    start(startMark);
   }
 
   ngOnInit() {
@@ -45,10 +45,6 @@ export class AppComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit() {
-    performance.mark(endMark);
-    performance.measure(measureName, startMark, endMark);
-    performance.clearMeasures(measureName);
-    performance.clearMarks(startMark);
-    performance.clearMarks(endMark);
+    end(startMark);
   }
 }
