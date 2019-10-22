@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { start, end } from 'perf-marks';
+import { start, end } from 'perf-marks/marks';
 
 @Component({
   selector: 'ngx-home-page',

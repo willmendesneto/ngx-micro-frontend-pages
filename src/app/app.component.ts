@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { Router, ResolveStart } from '@angular/router';
-import { start, end } from 'perf-marks';
+import { start, end } from 'perf-marks/marks';
 
 import { filter, map } from 'rxjs/operators';
 
