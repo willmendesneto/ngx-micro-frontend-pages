@@ -25,7 +25,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   ngOnInit() {
     this.router.events
       .pipe(
-        filter(event => event instanceof ResolveStart),
+        filter((event) => event instanceof ResolveStart),
         map((event: ResolveStart) => {
           let data = null;
           let route = event.state.root;
@@ -36,7 +36,7 @@ export class AppComponent implements AfterViewInit, OnInit {
           }
 
           return data;
-        }),
+        })
       )
       .subscribe((data: { title: string; description: string }) => {
         this.title = data.title;
